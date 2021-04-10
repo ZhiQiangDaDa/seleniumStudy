@@ -38,10 +38,11 @@ class testLogin(unittest.TestCase):
         self.driver.find_element(By.ID,"s-top-loginbtn").click()
         #需要等到页面加载出来才能找到下面的元素。此处等待1s，由于网络原因，可能会存在问题，
         #TODO 看使用怎样的等待方法
-        sleep(1)
-
+        #sleep(1)
+       #这是错误的写法
+        element=WebDriverWait(self.driver, 10).until(lambda the_driver: the_driver.find_element_by_id('TANGRAM__PSP_11__footerULoginBtn'), '失败')
         element.click()
-        #self.driver.find_element_by_id("TANGRAM__PSP_11__footerULoginBtn").click()
+        self.driver.find_element_by_id("TANGRAM__PSP_11__footerULoginBtn").click()
         sleep(1)
         self.name_input=  self.find_by_id('TANGRAM__PSP_11__userName')
         self.psd_input= self.find_by_id("TANGRAM__PSP_11__password")
