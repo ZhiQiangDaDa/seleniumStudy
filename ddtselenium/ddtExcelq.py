@@ -52,6 +52,7 @@ def getData():
     filename=path+r'\ddtselenium\datainfo2.xlsx'
     excels=xlrd.open_workbook(filename,'r')
     table=excels.sheet_by_index(0)
+    #下面是关键，如果不用新表直接返回xlrd读取到的数据，由于格式不同会导致报错
     newRows=[]
     for rowValue in range(1,table.nrows):
         newRows.append(table.row_values(rowValue,0,table.ncols))
