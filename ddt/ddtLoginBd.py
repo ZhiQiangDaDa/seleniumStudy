@@ -7,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def readData():
     return[['123456','psd','请输入帐号密码'],
+    ['123456','','请输入帐号密码'],
+    ['','','请输入帐号密码'],
 
     ]
 @ddt.ddt 
