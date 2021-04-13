@@ -20,9 +20,9 @@ class testLogin(unittest.TestCase):
         self.url="https://www.baidu.com/"
 
     def tearDown(self):
-        pass
+        
         #为了查看每次用例的执行结果。我把关闭browse的操作屏蔽了
-        # self.driver.quit()
+        self.driver.quit()
     def find_by_id(self,ob):
         return  self.driver.find_element_by_id(ob)    
 
