@@ -17,6 +17,7 @@ def readUserName(row):
     #filename=r'E:\pyy\ddtselenium\datainfo2.xlsx'
     #filename="datainfo2.xlsx"
     # fullpath = os.path.abspath('..\ddtselenium\datainfo2.xlsx')
+    #获取项目的相对路径
     path=os.getcwd()
     filename=path+r'\ddtselenium\datainfo2.xlsx'
     excels=open_workbook(filename,'r')
